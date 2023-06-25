@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+# Git conventions
+feat: Una nueva característica para el usuario.
+fix: Arregla un bug que afecta al usuario.
+perf: Cambios que mejoran el rendimiento del sitio.
+build: Cambios en el sistema de build, tareas de despliegue o instalación.
+ci: Cambios en la integración continua.
+docs: Cambios en la documentación.
+refactor: Refactorización del código como cambios de nombre de variables o funciones.
+style: Cambios de formato, tabulaciones, espacios o puntos y coma, etc; no afectan al usuario.
+test: Añade tests o refactoriza uno existente.
