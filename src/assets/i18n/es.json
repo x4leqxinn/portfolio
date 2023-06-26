@@ -1,0 +1,12 @@
+
+{
+    "navbar": {
+        "items": [
+            {"name":"Inicio", "url":"/"},
+            {"name":"Sobre mí","url":"/about"},
+            {"name":"Proyectos","url":"/about"},
+            {"name":"Servicios","url":"/about"},
+            {"name":"Contacto","url":"/about"}
+        ]
+    }
+}
