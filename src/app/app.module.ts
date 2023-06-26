@@ -1,29 +1,27 @@
-import { NgModule, LOCALE_ID } from '@angular/core';
-import { registerLocaleData } from '@angular/common';
-import localeEs from '@angular/common/locales/es';
-import localeEn from '@angular/common/locales/en';
-
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './shared/components/header/navbar/navbar.component';
 
-registerLocaleData(localeEs);
-registerLocaleData(localeEn);
+// HTTP
+import { HttpClientModule } from "@angular/common/http";
+
+// Custom translation 
+import { TranslationModule } from './translation.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavbarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    TranslationModule
   ],
-  providers: [
-    { provide: LOCALE_ID, useValue: 'es' } // Default language
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
