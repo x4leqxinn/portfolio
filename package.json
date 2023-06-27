@@ -7,11 +7,13 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:href": "ng build --base-href ./",
+    "build:href": "ng build --base-href ./ --configuration=production",
+    "build:i18n:dir": "mkdirp ./docs/assets/i18n",
     "delete:dist": "del dist",
     "delete:docs": "del docs",
     "copy:dist": "copyfiles dist/portfolio/* ./docs -f",
-    "build:github": "npm run delete:dist && npm run delete:docs && npm run build:href && npm run copy:dist"
+    "copy:i18n": "copyfiles src/assets/i18n/* ./docs/assets/i18n -f",
+    "build:github": "npm run delete:dist && npm run delete:docs && npm run build:href && npm run copy:dist && npm run build:i18n:dir && npm run copy:i18n"
   },
   "private": true,
   "dependencies": {
@@ -42,6 +44,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "mkdirp": "^3.0.1",
     "typescript": "~5.1.3"
   }
 }
